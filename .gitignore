@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Per-PC settings (screen read area, preferences)
+settings.json
+*.tmp
+
+# Fine-tuning outputs
+training/data/
+training/export/
+*.zip
+*.gguf
