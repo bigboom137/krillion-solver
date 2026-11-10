@@ -5,6 +5,8 @@ Covers spelling rules ("starts with B", "ending in -stan", 'containing "itch"',
 Parsing is deliberately conservative: a rule is only applied when its target is
 unambiguous (quoted, a capital letter, "the letter x", or a "-suffix"), so a
 prompt like "Name a dish containing cheese" is never treated as a spelling rule.
+A bare word also counts when it ends the rule, as in "a word ending in bound" or
+"a country starting with San", but for "containing" only when the prompt asks for a word.
 """
 
 import re
@@ -17,7 +19,17 @@ _QUOTES = "\"'“”‘’`"
 _TARGET = (rf"(?:[{_QUOTES}](?P<quoted>[^{_QUOTES}]{{1,20}})[{_QUOTES}]"
            r"|(?i:the\s+letters?)\s+(?P<letter>[A-Za-z]{1,15})\b"
            r"|-(?P<suffix>[A-Za-z]{1,15})\b"
-           r"|(?<![\w'])(?P<capital>[A-Z])(?![\w'.-]))")
+           r"|(?<![\w'])(?P<capital>[A-Z])(?![\w'.-])"
+           # A bare word that ends the rule: 'ending in bound', 'starts with San or Saint'.
+           r"|(?<![\w'-])(?P<bare>[A-Za-z]{2,15})(?=\s*(?:$|[.?!(),;:/]|(?i:or)\b)))")
+# Bare words that describe letters instead of spelling them: 'ends in a vowel', 'starts with it'.
+_NOT_BARE = {"vowel", "vowels", "consonant", "consonants", "letter", "letters", "number", "numbers",
+             "digit", "digits", "syllable", "syllables", "it", "them", "one", "that", "this", "these",
+             "those", "something", "anything", "nothing", "same", "double", "silent", "or", "and", "the"}
+_WORD_PROMPT = re.compile(r"\bwords?\b", re.I)
+# "doesn't end in ly", "that does not start with S", "never contains E" turn a rule around.
+_NEGATION = re.compile(r"(?:\b(?:does|do|did|is|are|can|must|should)\s+not|\b[a-z]+n['’]t|\bnot|\bnever)\s+$",
+                       re.I)
 # Further alternatives right after a target: 'contains J, K, or V', 'ends in "a" or "o"'.
 _ALTERNATIVE = re.compile(r"(?:\s*,\s*(?i:or\s+)?|\s+(?i:or)\s+|\s*/\s*)" + _TARGET)
 _STARTS = re.compile(r"\b(?i:start(?:s|ing)?|begin(?:s|ning)?)\s+(?i:with|in)\s+" + _TARGET)
@@ -53,9 +65,29 @@ def _item_key(text):
 
 
 def _target(match):
-    value = next(v for v in (match.group("quoted"), match.group("letter"),
-                             match.group("suffix"), match.group("capital")) if v)
+    value = next(v for v in (match.group("quoted"), match.group("letter"), match.group("suffix"),
+                             match.group("capital"), match.group("bare")) if v)
     return _letters(value)
+
+
+def _bare_ok(rule, target, prompt, contains):
+    """Whether target (the rule's first target or an alternative) is really spelling.
+
+    A bare word qualifies unless it describes letters ("a vowel"); for "containing" it also needs
+    a prompt that asks for a word, since 'a dish containing cheese' is about ingredients, and
+    "with" never introduces a bare word ('a word with friends').
+    """
+    word = target.group("bare")
+    if word is None:
+        return True
+    if word.lower() in _NOT_BARE:
+        return False
+    return not contains or (rule.group(0).lower().startswith(("contain", "includ"))
+                            and bool(_WORD_PROMPT.search(prompt[:rule.start()])))
+
+
+_VERBS = {"starts": "starts with", "ends": "ends with", "contains": "contains"}
+_NOT_VERBS = {"starts": "doesn't start with", "ends": "doesn't end with", "contains": "doesn't contain"}
 
 
 def _either(options):
@@ -68,12 +100,13 @@ class Rules:
     starts: list = field(default_factory=list)
     ends: list = field(default_factory=list)
     contains: list = field(default_factory=list)
+    avoid: list = field(default_factory=list)  # negated rules: ("ends", ["ly"]) for "doesn't end in ly"
     length: int = None
     excluded: set = field(default_factory=set)
     spans: list = field(default_factory=list)  # (start, end) of each rule's wording in the prompt
 
     def __bool__(self):
-        return bool(self.starts or self.ends or self.contains or self.length or self.excluded)
+        return bool(self.starts or self.ends or self.contains or self.avoid or self.length or self.excluded)
 
     def violation(self, answer):
         """Why answer breaks a rule (a short phrase), or None if it's fine."""
@@ -90,6 +123,9 @@ class Rules:
         for options in self.contains:
             if not any(c in letters for c in options):
                 return f"doesn't contain {_either(options)}"
+        for kind, options in self.avoid:
+            if kind == "starts" and any(letters.startswith(s) or without_article.startswith(s) for s in options)                     or kind == "ends" and any(letters.endswith(e) for e in options)                     or kind == "contains" and any(c in letters for c in options):
+                return f"{_VERBS[kind]} {_either(options)}"
         if self.length and len(re.sub(r"[^a-z]", "", _fold(answer))) != self.length:
             return f"isn't {self.length} letters"
         return None
@@ -98,6 +134,7 @@ class Rules:
         parts = [f"starts with {_either(o)}" for o in self.starts]
         parts += [f"ends with {_either(o)}" for o in self.ends]
         parts += [f"contains {_either(o)}" for o in self.contains]
+        parts += [f"{_NOT_VERBS[kind]} {_either(o)}" for kind, o in self.avoid]
         if self.length:
             parts.append(f"{self.length} letters")
         if self.excluded:
@@ -121,17 +158,24 @@ def parse(prompt):
     """Rules stated in a prompt (an empty Rules when there are none)."""
     rules = Rules()
     taken = []  # spans already used, so "starts with" isn't read again as "with"
-    for pattern, bucket in ((_STARTS, rules.starts), (_ENDS, rules.ends), (_CONTAINS, rules.contains)):
+    for pattern, kind in ((_STARTS, "starts"), (_ENDS, "ends"), (_CONTAINS, "contains")):
         for m in pattern.finditer(prompt):
-            if any(a <= m.start() < b for a, b in taken):
+            contains = kind == "contains"
+            if any(a <= m.start() < b for a, b in taken) or not _bare_ok(m, m, prompt, contains):
                 continue
             options, end = [_target(m)], m.end()
-            while (more := _ALTERNATIVE.match(prompt, end)):
+            while (more := _ALTERNATIVE.match(prompt, end)) and _bare_ok(m, more, prompt, contains):
                 options.append(_target(more))
                 end = more.end()
             options = [o for o in options if o]
-            if options:
-                bucket.append(options)
+            if not options:
+                continue
+            negation = _NEGATION.search(prompt, 0, m.start())
+            if negation:
+                rules.avoid.append((kind, options))
+                taken.append((negation.start(), end))
+            else:
+                getattr(rules, kind).append(options)
                 taken.append((m.start(), end))
     rules.spans.extend(taken)
     for pattern in _LENGTH:

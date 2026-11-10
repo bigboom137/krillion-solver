@@ -103,11 +103,13 @@ double-click another to copy it instead. Each answer is labelled with where it c
 Built-in answers don't stop the model from running. They're there first and as a fallback.
 
 **Prompt rules.** When a prompt states a spelling rule or an exclusion ("starts with B",
-'ends in "stan"', "contains J, K, or V", "(apple doesn't count)", "other than Earth"), the
-rules show under the prompt. Answers that break one are greyed at the bottom with the
+'ends in "stan"', "ending in bound", "contains J, K, or V", "doesn't end in ly",
+"(apple doesn't count)", "other than Earth"), the rules show under the prompt. Answers that break one are greyed at the bottom with the
 reason and never copied. For word prompts, answers that aren't real words are marked
 "not in the dictionary" and ranked lower, and wrong syllable counts are flagged. If a rule
-is ambiguous ("starts with a vowel"), it's left to the model.
+is ambiguous ("starts with a vowel"), it's left to the model. A plain word after "containing"
+only counts as spelling when the prompt asks for a word, so "a dish containing cheese" isn't a
+rule.
 
 **Passes.** Each prompt gets several generations (**Passes**, default 3). Each one is told
 the answers already found, so it adds new ones. Extra passes apply to short lists like a

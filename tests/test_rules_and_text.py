@@ -37,10 +37,29 @@ class PromptRules(unittest.TestCase):
         ("Name a planet other than Earth", "Earth", False),
         ("Name a color, but red and blue don't count", "Blue", False),
         ("Name a color, but red and blue don't count", "Green", True),
+        # Bare words as targets
+        ("Name a English word ending in bound", "Spellbound", True),
+        ("Name a English word ending in bound", "Spellbinding", False),
+        ("Name an English word containing micro", "Microwave", True),
+        ("Name an English word containing micro", "Kitchen", False),
+        ("Name a word ending in ing or ed", "Jumped", True),
+        ("Name a word ending in ing or ed", "Jumps", False),
+        ("Name a country starting with San or Saint", "Saint Lucia", True),
+        ("Name a country starting with San or Saint", "Samoa", False),
+        # Negated rules
+        ('Name an adverb that doesn\'t end in ly (like "soon")', "Quickly", False),
+        ('Name an adverb that doesn\'t end in ly (like "soon")', "Often", True),
+        ("Name an animal that does not start with S", "Snake", False),
+        ("Name an animal that does not start with S", "Okapi", True),
+        ("Name a word that doesn't contain E", "Banana", True),
+        ("Name a word that doesn't contain E", "Apple", False),
     ]
     NO_RULES = [
         "Name a dish containing cheese", "Name a movie starting with a number", "Name a song by T-Pain",
         "Name a word that starts with a vowel", "Name a fruit", "Name a type of balloon (it's my birthday)",
+        "Name a dish containing cheese or ham", "Name something you do with friends", "Name a word with friends",
+        "Name a food ending in a vowel", "Name a word starting with it",
+        "Name a country that shares a land border with France, Germany, or Spain",
         "Name a movie from Pixar, DreamWorks Animation, Illumination, Disney Animation, Sony Pictures Animation "
         "or Blue Sky Studios",
     ]
