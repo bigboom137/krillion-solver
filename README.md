@@ -207,3 +207,7 @@ prompt rules and exclusions, built-in category and dictionary answers, multi-pas
 browser monitoring with diagnostics, the answer history editor and fine-tuning. They were
 written from scratch here; no code was copied. Word data comes from the
 [CMU Pronouncing Dictionary](https://github.com/cmusphinx/cmudict) via the `cmudict` package.
+
+## License
+
+[MIT](LICENSE)
