@@ -10120,7 +10120,7 @@
           "answer": "The Partially Examined Life",
           "est_tier": "deep_cut",
           "confidence": 0.92,
-          "status": "unverified",
+          "status": "rejected",
           "tier": null,
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:35:35+00:00"
@@ -10129,8 +10129,8 @@
           "answer": "The Dollop",
           "est_tier": "deep_cut",
           "confidence": 0.9,
-          "status": "unverified",
-          "tier": null,
+          "status": "accepted",
+          "tier": "rare",
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:35:36+00:00"
         },
@@ -10197,7 +10197,8 @@
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:35:45+00:00"
         }
-      }
+      },
+      "local_checked": true
     },
     "villain from star wars dc or lord of the rings": {
       "prompt": "Name a villain from Star Wars, DC, or Lord of the Rings",
@@ -10292,7 +10293,8 @@
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:36:01+00:00"
         }
-      }
+      },
+      "local_checked": true
     },
     "part of the human body below the waist": {
       "prompt": "Name a part of the human body below the waist",
@@ -10310,8 +10312,8 @@
           "answer": "Coccyx",
           "est_tier": "deep_cut",
           "confidence": 0.8,
-          "status": "unverified",
-          "tier": null,
+          "status": "accepted",
+          "tier": "schooler",
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:36:08+00:00"
         },
@@ -10387,7 +10389,8 @@
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:36:15+00:00"
         }
-      }
+      },
+      "local_checked": true
     },
     "language with more than 10 million total speakers": {
       "prompt": "Name a language with more than 10 million total speakers",
@@ -10482,7 +10485,8 @@
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:36:40+00:00"
         }
-      }
+      },
+      "local_checked": true
     },
     "animal that eats bugs documented regular part of diet": {
       "prompt": "Name an animal that eats bugs (documented regular part of diet)",
@@ -10500,7 +10504,7 @@
           "answer": "Mantis Shrimp",
           "est_tier": "krillion",
           "confidence": 0.98,
-          "status": "unverified",
+          "status": "rejected",
           "tier": null,
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:36:47+00:00"
@@ -10509,8 +10513,8 @@
           "answer": "Praying Mantis",
           "est_tier": "deep_cut",
           "confidence": 0.92,
-          "status": "unverified",
-          "tier": null,
+          "status": "accepted",
+          "tier": "schooler",
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:36:48+00:00"
         },
@@ -10577,7 +10581,8 @@
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:36:56+00:00"
         }
-      }
+      },
+      "local_checked": true
     },
     "toy brand": {
       "prompt": "Name a toy brand",
@@ -10604,8 +10609,8 @@
           "answer": "Tinkertoys",
           "est_tier": "deep_cut",
           "confidence": 0.92,
-          "status": "unverified",
-          "tier": null,
+          "status": "accepted",
+          "tier": "rare",
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:37:04+00:00"
         },
@@ -10672,7 +10677,8 @@
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:37:12+00:00"
         }
-      }
+      },
+      "local_checked": true
     },
     "country with in in its name": {
       "prompt": "Name a country with \"in\" in its name",
@@ -10766,8 +10772,99 @@
           "tier": null,
           "source": "ollama:llama3.2:3b",
           "added": "2026-11-09T14:37:29+00:00"
+        },
+        "burkina faso": {
+          "answer": "Burkina Faso",
+          "est_tier": "rare",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "equatorial guinea": {
+          "answer": "Equatorial Guinea",
+          "est_tier": "rare",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "eswatini": {
+          "answer": "Eswatini",
+          "est_tier": "rare",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "guinea": {
+          "answer": "Guinea",
+          "est_tier": "rare",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "sao tome and principe": {
+          "answer": "Sao Tome and Principe",
+          "est_tier": "rare",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "bosnia and herzegovina": {
+          "answer": "Bosnia and Herzegovina",
+          "est_tier": "rare",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "spain": {
+          "answer": "Spain",
+          "est_tier": "plankton",
+          "confidence": 0.95,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "united kingdom": {
+          "answer": "United Kingdom",
+          "est_tier": "plankton",
+          "confidence": 0.95,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "china": {
+          "answer": "China",
+          "est_tier": "plankton",
+          "confidence": 0.95,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
+        },
+        "india": {
+          "answer": "India",
+          "est_tier": "plankton",
+          "confidence": 0.95,
+          "status": "unverified",
+          "tier": null,
+          "source": "local",
+          "added": "2026-11-10T01:39:00+00:00"
         }
-      }
+      },
+      "local_checked": true
     },
     "game you night play at a bar or pub": {
       "prompt": "Name a game you night play at a bar or pub",
@@ -14952,6 +15049,917 @@
           "added": "2026-11-09T17:50:29+00:00"
         }
       }
+    },
+    "podcast 1k ratings on spotify the dollop with dave anthony and gareth reynolds 1 400 other players chose this": {
+      "prompt": "NAME A PODCAST (1K+ RATINGS ON SPOTIFY) The Dollop with Dave Anthony and Gareth Reynolds 1,400 other players chose this",
+      "answers": {},
+      "local_checked": true
+    },
+    "billie eilish song": {
+      "prompt": "Name a Billie Eilish song",
+      "answers": {
+        "myfuture": {
+          "answer": "myfuture",
+          "est_tier": "krillion",
+          "confidence": 0.98,
+          "status": "accepted",
+          "tier": "rare",
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:37+00:00"
+        },
+        "goldwing": {
+          "answer": "goldwing",
+          "est_tier": "krillion",
+          "confidence": 0.95,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:38+00:00"
+        },
+        "allnight": {
+          "answer": "allnight",
+          "est_tier": "deep_cut",
+          "confidence": 0.92,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:39+00:00"
+        },
+        "nda": {
+          "answer": "nda",
+          "est_tier": "deep_cut",
+          "confidence": 0.9,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:40+00:00"
+        },
+        "idf": {
+          "answer": "idf",
+          "est_tier": "rare",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:41+00:00"
+        },
+        "odysey": {
+          "answer": "odysey",
+          "est_tier": "rare",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:42+00:00"
+        },
+        "whenweallgo": {
+          "answer": "whenweallgo",
+          "est_tier": "schooler",
+          "confidence": 0.75,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:44+00:00"
+        },
+        "buryme": {
+          "answer": "buryme",
+          "est_tier": "schooler",
+          "confidence": 0.7,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:45+00:00"
+        },
+        "gold": {
+          "answer": "gold",
+          "est_tier": "schooler",
+          "confidence": 0.65,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:46+00:00"
+        },
+        "badguy": {
+          "answer": "badguy",
+          "est_tier": "plankton",
+          "confidence": 0.6,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:47+00:00"
+        },
+        "everythingiwanted": {
+          "answer": "everythingiwanted",
+          "est_tier": "krillion",
+          "confidence": 0.9,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:51+00:00"
+        },
+        "stbuzz": {
+          "answer": "stbuzz",
+          "est_tier": "deep_cut",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:52+00:00"
+        },
+        "gimme": {
+          "answer": "gimme",
+          "est_tier": "deep_cut",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:53+00:00"
+        },
+        "notapunkgirl": {
+          "answer": "notapunkgirl",
+          "est_tier": "deep_cut",
+          "confidence": 0.7,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:54+00:00"
+        },
+        "xanny": {
+          "answer": "xanny",
+          "est_tier": "schooler",
+          "confidence": 0.6,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:55+00:00"
+        },
+        "coffeesnatchers": {
+          "answer": "coffeesnatchers",
+          "est_tier": "schooler",
+          "confidence": 0.5,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:56+00:00"
+        },
+        "alligator": {
+          "answer": "alligator",
+          "est_tier": "rare",
+          "confidence": 0.4,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:57+00:00"
+        },
+        "ilomilo": {
+          "answer": "ilomilo",
+          "est_tier": "rare",
+          "confidence": 0.4,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:58+00:00"
+        },
+        "loveyoulikeagirl": {
+          "answer": "loveyoulikeagirl",
+          "est_tier": "plankton",
+          "confidence": 0.3,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:43:59+00:00"
+        },
+        "iknow": {
+          "answer": "iknow",
+          "est_tier": "plankton",
+          "confidence": 0.3,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:00+00:00"
+        }
+      },
+      "local_checked": true
+    },
+    "member country of the arab league": {
+      "prompt": "Name a member country of the Arab League",
+      "answers": {
+        "tuvalu": {
+          "answer": "Tuvalu",
+          "est_tier": "deep_cut",
+          "confidence": 0.01,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:07+00:00"
+        },
+        "liechtenstein": {
+          "answer": "Liechtenstein",
+          "est_tier": "deep_cut",
+          "confidence": 0.01,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:08+00:00"
+        },
+        "kosovo": {
+          "answer": "Kosovo",
+          "est_tier": "deep_cut",
+          "confidence": 0.05,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:10+00:00"
+        },
+        "mauritius": {
+          "answer": "Mauritius",
+          "est_tier": "deep_cut",
+          "confidence": 0.05,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:11+00:00"
+        },
+        "qatar": {
+          "answer": "Qatar",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:12+00:00"
+        },
+        "oman": {
+          "answer": "Oman",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:14+00:00"
+        },
+        "lebanon": {
+          "answer": "Lebanon",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:15+00:00"
+        },
+        "united arab emirates": {
+          "answer": "United Arab Emirates",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:16+00:00"
+        },
+        "bahrain": {
+          "answer": "Bahrain",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:18+00:00"
+        },
+        "jordan": {
+          "answer": "Jordan",
+          "est_tier": "plankton",
+          "confidence": 0.9,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:19+00:00"
+        }
+      },
+      "local_checked": true
+    },
+    "movie starring zendaya": {
+      "prompt": "Name a movie starring Zendaya",
+      "answers": {
+        "spider man homecoming": {
+          "answer": "Spider-Man: Homecoming",
+          "est_tier": "schooler",
+          "confidence": 0.9,
+          "status": "accepted",
+          "tier": "plankton",
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:26+00:00"
+        },
+        "euphoria": {
+          "answer": "Euphoria",
+          "est_tier": "rare",
+          "confidence": 0.8,
+          "status": "rejected",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:27+00:00"
+        },
+        "greatest showman": {
+          "answer": "Greatest Showman",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "accepted",
+          "tier": "schooler",
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:28+00:00"
+        },
+        "smallfoot": {
+          "answer": "Smallfoot",
+          "est_tier": "deep_cut",
+          "confidence": 0.7,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:29+00:00"
+        },
+        "greatest showman rehearsal": {
+          "answer": "The Greatest Showman: Rehearsal",
+          "est_tier": "deep_cut",
+          "confidence": 0.7,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:30+00:00"
+        },
+        "spider man no way home": {
+          "answer": "Spider-Man: No Way Home",
+          "est_tier": "schooler",
+          "confidence": 0.6,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:31+00:00"
+        },
+        "spider man far from home": {
+          "answer": "Spider-Man: Far From Home",
+          "est_tier": "schooler",
+          "confidence": 0.6,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:33+00:00"
+        },
+        "dune": {
+          "answer": "Dune",
+          "est_tier": "deep_cut",
+          "confidence": 0.5,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:33+00:00"
+        },
+        "spider man 2": {
+          "answer": "Spider-Man 2",
+          "est_tier": "deep_cut",
+          "confidence": 0.4,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:34+00:00"
+        },
+        "spider man homecoming uncredited voice role": {
+          "answer": "Spider-Man: Homecoming (uncredited voice role)",
+          "est_tier": "deep_cut",
+          "confidence": 0.3,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:36+00:00"
+        },
+        "gilded age": {
+          "answer": "The Gilded Age",
+          "est_tier": "deep_cut",
+          "confidence": 0.95,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:51+00:00"
+        },
+        "john wick chapter 3 parabellum": {
+          "answer": "John Wick: Chapter 3 – Parabellum",
+          "est_tier": "krillion",
+          "confidence": 0.99,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:57+00:00"
+        },
+        "book of henry": {
+          "answer": "The Book of Henry",
+          "est_tier": "deep_cut",
+          "confidence": 0.95,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:44:58+00:00"
+        },
+        "sierra burgess is a loser": {
+          "answer": "Sierra Burgess is a Loser",
+          "est_tier": "deep_cut",
+          "confidence": 0.92,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:00+00:00"
+        },
+        "spider man into the spider verse": {
+          "answer": "Spider-Man: Into the Spider-Verse",
+          "est_tier": "schooler",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:03+00:00"
+        },
+        "daredevil": {
+          "answer": "Daredevil",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:05+00:00"
+        }
+      },
+      "local_checked": true
+    },
+    "character from the fresh prince of bel air": {
+      "prompt": "Name a character from The Fresh Prince of Bel-Air",
+      "answers": {
+        "patti": {
+          "answer": "Patti",
+          "est_tier": "krillion",
+          "confidence": 0.2,
+          "status": "rejected",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:19+00:00"
+        },
+        "hilary": {
+          "answer": "Hilary",
+          "est_tier": "deep_cut",
+          "confidence": 0.8,
+          "status": "accepted",
+          "tier": "schooler",
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:20+00:00"
+        },
+        "ashley": {
+          "answer": "Ashley",
+          "est_tier": "deep_cut",
+          "confidence": 0.9,
+          "status": "accepted",
+          "tier": "schooler",
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:22+00:00"
+        },
+        "franklin": {
+          "answer": "Franklin",
+          "est_tier": "deep_cut",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:23+00:00"
+        },
+        "geoffrey": {
+          "answer": "Geoffrey",
+          "est_tier": "deep_cut",
+          "confidence": 0.7,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:24+00:00"
+        },
+        "vivian": {
+          "answer": "Vivian",
+          "est_tier": "schooler",
+          "confidence": 0.6,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:26+00:00"
+        },
+        "carlton": {
+          "answer": "Carlton",
+          "est_tier": "schooler",
+          "confidence": 0.9,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:27+00:00"
+        },
+        "will": {
+          "answer": "Will",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:28+00:00"
+        },
+        "phoebe": {
+          "answer": "Phoebe",
+          "est_tier": "plankton",
+          "confidence": 0.5,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:30+00:00"
+        },
+        "julia": {
+          "answer": "Julia",
+          "est_tier": "plankton",
+          "confidence": 0.4,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:31+00:00"
+        },
+        "bob": {
+          "answer": "Bob",
+          "est_tier": "krillion",
+          "confidence": 0.01,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:36+00:00"
+        },
+        "hunley": {
+          "answer": "Hunley",
+          "est_tier": "deep_cut",
+          "confidence": 0.04,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:37+00:00"
+        },
+        "ruthie": {
+          "answer": "Ruthie",
+          "est_tier": "deep_cut",
+          "confidence": 0.06,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:39+00:00"
+        },
+        "paris": {
+          "answer": "Paris",
+          "est_tier": "rare",
+          "confidence": 0.08,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:40+00:00"
+        }
+      },
+      "local_checked": true
+    },
+    "mexican dish": {
+      "prompt": "Name a Mexican dish",
+      "answers": {
+        "sopa de elote": {
+          "answer": "Sopa de elote",
+          "est_tier": "krillion",
+          "confidence": 0.9,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:45+00:00"
+        },
+        "tinga de puerco": {
+          "answer": "Tinga de puerco",
+          "est_tier": "deep_cut",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:47+00:00"
+        },
+        "sopes de chorizo": {
+          "answer": "Sopes de chorizo",
+          "est_tier": "schooler",
+          "confidence": 0.7,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:48+00:00"
+        },
+        "chapulines con nopal": {
+          "answer": "Chapulines con nopal",
+          "est_tier": "deep_cut",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:50+00:00"
+        },
+        "pozole blanco": {
+          "answer": "Pozole blanco",
+          "est_tier": "rare",
+          "confidence": 0.75,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:51+00:00"
+        },
+        "tacos de lengua": {
+          "answer": "Tacos de lengua",
+          "est_tier": "schooler",
+          "confidence": 0.65,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:53+00:00"
+        },
+        "enchiladas suizas": {
+          "answer": "Enchiladas suizas",
+          "est_tier": "rare",
+          "confidence": 0.6,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:54+00:00"
+        },
+        "sopa de tortilla": {
+          "answer": "Sopa de tortilla",
+          "est_tier": "schooler",
+          "confidence": 0.55,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:56+00:00"
+        },
+        "chiles rellenos de queso": {
+          "answer": "Chiles rellenos de queso",
+          "est_tier": "deep_cut",
+          "confidence": 0.5,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:58+00:00"
+        },
+        "tacos de carnitas": {
+          "answer": "Tacos de carnitas",
+          "est_tier": "plankton",
+          "confidence": 0.4,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:45:59+00:00"
+        },
+        "tostadas de lengua": {
+          "answer": "Tostadas de lengua",
+          "est_tier": "krillion",
+          "confidence": 0.02,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:04+00:00"
+        },
+        "tacos de chapulines": {
+          "answer": "Tacos de chapulines",
+          "est_tier": "krillion",
+          "confidence": 0.02,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:05+00:00"
+        },
+        "sopes de milanesa de chorizo": {
+          "answer": "Sopes de milanesa de chorizo",
+          "est_tier": "deep_cut",
+          "confidence": 0.01,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:07+00:00"
+        },
+        "tinga de pescado": {
+          "answer": "Tinga de pescado",
+          "est_tier": "deep_cut",
+          "confidence": 0.01,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:08+00:00"
+        },
+        "enchiladas de chicharron": {
+          "answer": "Enchiladas de chicharrón",
+          "est_tier": "deep_cut",
+          "confidence": 0.01,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:09+00:00"
+        },
+        "sopa de pescado": {
+          "answer": "Sopa de pescado",
+          "est_tier": "rare",
+          "confidence": 0.005,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:10+00:00"
+        },
+        "tacos de tripas": {
+          "answer": "Tacos de tripas",
+          "est_tier": "rare",
+          "confidence": 0.005,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:11+00:00"
+        },
+        "chiles en nogada de pollo": {
+          "answer": "Chiles en nogada de pollo",
+          "est_tier": "rare",
+          "confidence": 0.005,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:12+00:00"
+        }
+      },
+      "local_checked": true
+    },
+    "english word ending in bound": {
+      "prompt": "Name an English word ending in bound\"",
+      "answers": {
+        "unbound": {
+          "answer": "unbound",
+          "est_tier": "krillion",
+          "confidence": 0.999,
+          "status": "accepted",
+          "tier": "schooler",
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:16+00:00"
+        },
+        "abound": {
+          "answer": "abound",
+          "est_tier": "deep_cut",
+          "confidence": 0.9,
+          "status": "accepted",
+          "tier": "schooler",
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:26+00:00"
+        },
+        "boundless": {
+          "answer": "boundless",
+          "est_tier": "schooler",
+          "confidence": 0.8,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:28+00:00"
+        },
+        "bound": {
+          "answer": "bound",
+          "est_tier": "plankton",
+          "confidence": 0.7,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:30+00:00"
+        },
+        "bounder": {
+          "answer": "bounder",
+          "est_tier": "rare",
+          "confidence": 0.5,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:46:33+00:00"
+        }
+      },
+      "local_checked": true
+    },
+    "twitch streamer with more than 500k followers": {
+      "prompt": "Name a Twitch streamer with more than 500k followers",
+      "answers": {
+        "xqcow": {
+          "answer": "xQcOW",
+          "est_tier": "krillion",
+          "confidence": 0.97,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:11+00:00"
+        },
+        "shroud": {
+          "answer": "Shroud",
+          "est_tier": "krillion",
+          "confidence": 0.97,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:13+00:00"
+        },
+        "timthetatman": {
+          "answer": "TimTheTatman",
+          "est_tier": "deep_cut",
+          "confidence": 0.92,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:14+00:00"
+        },
+        "imaqtpie": {
+          "answer": "Imaqtpie",
+          "est_tier": "deep_cut",
+          "confidence": 0.88,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:15+00:00"
+        },
+        "summit1g": {
+          "answer": "Summit1g",
+          "est_tier": "deep_cut",
+          "confidence": 0.85,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:16+00:00"
+        },
+        "lirik": {
+          "answer": "Lirik",
+          "est_tier": "schooler",
+          "confidence": 0.78,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:17+00:00"
+        },
+        "sodapoppin": {
+          "answer": "Sodapoppin",
+          "est_tier": "schooler",
+          "confidence": 0.72,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:18+00:00"
+        },
+        "disguised toast": {
+          "answer": "Disguised Toast",
+          "est_tier": "schooler",
+          "confidence": 0.65,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:19+00:00"
+        },
+        "drdisrespect": {
+          "answer": "DrDisRespect",
+          "est_tier": "schooler",
+          "confidence": 0.58,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:20+00:00"
+        },
+        "pokimane": {
+          "answer": "Pokimane",
+          "est_tier": "plankton",
+          "confidence": 0.5,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:22+00:00"
+        },
+        "tsm": {
+          "answer": "TSM",
+          "est_tier": "krillion",
+          "confidence": 0.1,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:28+00:00"
+        },
+        "ninja": {
+          "answer": "Ninja",
+          "est_tier": "plankton",
+          "confidence": 0.99,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:40+00:00"
+        },
+        "crispix": {
+          "answer": "Crispix",
+          "est_tier": "deep_cut",
+          "confidence": 0.9,
+          "status": "unverified",
+          "tier": null,
+          "source": "ollama:llama3.2:3b",
+          "added": "2026-11-10T01:47:44+00:00"
+        }
+      },
+      "local_checked": true
     }
   }
 }
